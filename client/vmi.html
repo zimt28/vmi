@@ -1,0 +1,16 @@
+<head>
+  <title>viewmodel issue</title>
+</head>
+
+<body>
+  {{> demo}}
+</body>
+
+<template name="demo">
+  <div data-bind="if: showDemoSections" class="demo"></div>
+  <p>
+    Refresh page to see boxes above and below flicker/ disappear.<br />
+    Setting "showDemoSections: false" on the "Demo" viewmodel doesn't cause flickering.
+  </p>
+  <div data-bind="if: showDemoSections" class="demo"></div>
+</template>
